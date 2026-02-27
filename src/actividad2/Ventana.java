@@ -7,6 +7,8 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -15,14 +17,48 @@ public class Ventana extends JFrame{
 
 	public Ventana() {
 				
-				this.setVisible(true);
+				
 				this.setSize(1100,500);
 				this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				this.setLocationRelativeTo(null);
 				this.setMinimumSize(new Dimension(500,500));
 				this.setMaximumSize(new Dimension(1100,500));
-				this.setTitle("Inicio Sesion");
+				this.setTitle("Tabla");
 				this.setLayout(null);
+	
+	JMenuBar barra = new JMenuBar();
+	
+	JMenu archivo = new JMenu("ARCHIVO");
+	
+	JMenu open = new JMenu("Abrir");
+	JMenu close = new JMenu("Cerrar");
+	JMenu save = new JMenu("Guardar");
+	JMenu newFile = new JMenu("Nuevo");
+	
+	archivo.add(open);
+	archivo.add(close);
+	archivo.add(save);
+	archivo.add(newFile)
+;	
+	barra.add(archivo);
+	
+	JMenu menuItem = new JMenu("Otros");
+	
+	archivo.addSeparator();
+	
+			
+	JMenu submenu = new JMenu("Itemsss");
+	
+	submenu.add(menuItem);
+	
+	menuItem = new JMenu("Another Item");
+	submenu.add(menuItem);
+	archivo.add(submenu);
+	
+	this.setJMenuBar(barra);
+	
+	this.setVisible(true);
+	
 	
 
 	JPanel users = new JPanel(); 
