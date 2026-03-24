@@ -30,7 +30,7 @@ public class Ventana extends JFrame{
 	
 	JMenu archivo = new JMenu("ARCHIVO");
 	
-	JMenu open = new JMenu("Abrir");
+	JMenu open = new JMenu("Abri");
 	JMenu close = new JMenu("Cerrar");
 	JMenu save = new JMenu("Guardar");
 	JMenu newFile = new JMenu("Nuevo");
